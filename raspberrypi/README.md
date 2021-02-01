@@ -9,8 +9,9 @@ Automate them with [Robot-Runner].
 # Package
   - Ubuntu 18.04
   - ROS2 (Eloquent)
+  - ROS1 (Melodic)
   - Turtlebot3 ROS Modules
-  - easyTello Python Library + Runner Script
+  - TelloPy Python Library
 ---
 
 # Log In
@@ -18,7 +19,7 @@ Automate them with [Robot-Runner].
 * Username: ubuntu
 * Password: s2group
 
-## Remote (SSH)
+## Remote - Ethernet Default IP (SSH)
 ```bash
 $ ssh s2group@192.168.200.200
 ```
@@ -70,7 +71,7 @@ $ sudo netplan apply
 
 ## Setup the ROS1 environment:
 
-Setup environment variables:
+Setup the environment variables:
 
 ```bash
 $ bash /opt/ros/melodic/setup.bash
@@ -101,7 +102,7 @@ Run master node (if you run on standalone mode)...
 $ roscore &
 ```
 
-otherwise, you set up ROS master node?
+otherwise, you set up ROS master parameters:
 
 ```bash
 export ROS_MASTER_URI=http://<master_host>:<master_port>
@@ -133,7 +134,7 @@ If ROS1 is running, kill the master node.
 $ pkill roscore
 ```
 
-Setup environment variables:
+Setup the environment variables:
 
 ```bash
 $ bash /opt/ros/eloquent/setup.bash
@@ -171,9 +172,9 @@ publishing #2: std_msgs.msg.String(data='Hello there')
 publishing #3: std_msgs.msg.String(data='Hello there')
 ```
 
-## Check DJ Tello (TELLO > WIFI -- ETHERNET < ROS)
+## Check DJ Tello (TELLO > WIFI -- RaspberryPy -- ETHERNET < ROS)
 
-Raspberry connects to TELLO WiFi, while ROS runs on ethernet network. So far, you must write your own Python scripts by using [TelloPy library] to interact to Tello, and manage to link [rospy] (for ROS communicaton) and TelloPy. Not a big deal at all!
+Raspberry WiFi connects to TELLO (AP Mode), while all the ROS communication goes on rasp Ethernet network. So far, you must write your own Python scripts by using [TelloPy library] to interact with Tello and manage to link [rospy] (for ROS communication) and TelloPy. Not a big deal at all!
 
 Anyway, we'll be dropping here a simple example.
 
@@ -211,11 +212,12 @@ ALT:  0 | SPD:  0 | BAT: 39 | WIFI: 90 | CAM:  0 | MODE: 41
 
 ### DJ Tello Example
 
-Not available yet. TODO by Michel.
+Not available yet. To be done by Michel.
 
 ## Check Turtlebot
 
-TODO by Ivano/VU Team
+To be done by VU Team (Ivano's students)
+
 ...
 
 ---
@@ -230,7 +232,3 @@ TODO by Ivano/VU Team
    [Robot-Runner]: <https://github.com/S2-group/robot-runner>
    [TelloPy library]: <https://github.com/hanyazou/TelloPy>
    [rospy]: <http://wiki.ros.org/rospy>
-<<<<<<< HEAD
-
-=======
->>>>>>> 527382e60e46dea7ea2e8aa115440f6449ea9326
