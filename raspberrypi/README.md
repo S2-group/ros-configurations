@@ -8,15 +8,14 @@ Automate them with [Robot-Runner].
 
 # How to use the image?
 
-Requires a 16 GB SD card.
+It requires a 16 GB SD card.
 
 ```bash
 $ wget http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz
 $ tar -xf ubuntu-rasp-ros.img.xz
 $ dd if=ubuntu-rasp-ros.img of=/dev/<your_sd_card> bs=4M
 ```
-Enjoy it!
-
+Now, follow all the setups...
 
 > It has been run on Raspberry Pi 3 Model B+ and Raspberry Pi 4 Model B.
 ---
