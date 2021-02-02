@@ -1,6 +1,6 @@
 # Raspberry+ROS Image
 
-**Since GitHub restricts file size to 100MB, you can dowload the compacted image from [here](http://www.iotrixx.com.br/imgs/raspberry/raspberry-ros.tar.xz).**
+**Since GitHub restricts file size to 100MB, you can dowload the compacted image from [here](http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz).**
 
 This is a customized Ubuntu Bionic (18.04) image for running ROS on Raspberry Pi devices. By default, it supports Turtlebot3 and DJ Tello. You can enable other robots according to your needs. All the information about is based on Linux command line.
 
@@ -11,9 +11,9 @@ Automate them with [Robot-Runner].
 Requires a 16 GB SD card.
 
 ```bash
-$ wget http://www.iotrixx.com.br/imgs/raspberry/raspberry-ros.tar.xz
-$ tar -tvf raspberry-ros.tar.xz
-$ dd if=raspberry-ros.img of=/dev/<your_sd_card> bs=4M
+$ wget http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz
+$ tar -xf ubuntu-rasp-ros.img.xz
+$ dd if=ubuntu-rasp-ros.img of=/dev/<your_sd_card> bs=4M
 ```
 Enjoy it!
 
