@@ -12,7 +12,7 @@ It requires a 16 GB SD card.
 
 ```bash
 $ wget http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz
-$ tar -xf ubuntu-rasp-ros.img.xz
+$ unxz ubuntu-rasp-ros.img.xz
 $ dd if=ubuntu-rasp-ros.img of=/dev/<your_sd_card> bs=4M
 ```
 Now, follow all the setups...
