@@ -13,11 +13,12 @@ Specifically, you can change *FROM ros:foxy* to *FROM ros:eloquent* or any other
 
 ```bash
 $ git clone git@github.com:S2-group/ros-configurations.git
-$ cd ros-configuration/docker/
-$ docker build - < Dockerfile
+$ cd ros-configuration/docker/ros2
+$ docker build -f- . < Dockerfile
 ```
+If you want to use ROS1, please use the path *ros-configuration/docker/ros2* instead.
 
-You can check you Docker images:
+You can check your Docker images:
 
 ```bash
 $ docker images | grep ros
