@@ -46,14 +46,15 @@ Running a containered image:
 $ docker --nvidia --x11 --user --home gazebo-ros 
 ```
 
-From now on you will be in the Docker container shell. At the first access you must configure the environment:
+From now on you will be in the Docker container shell. You must configure the environment (need to put this in the Dockerfile):
 ```bash
 # ./setup.sh
+# source source.sh
 ```
 
 Running a simulation example:
 ```
-# ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py
+# ros2 launch turtlebot3_gazebo empty_world.launch.py
 ```
 
 ## Creating a World (Gazebo Model)
