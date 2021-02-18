@@ -1,6 +1,6 @@
 # Gazebo Simulator
 
-Here we explain how to run a [Gazebo](http://gazebosim.org/){:target="_blank"} simulation.
+Here we explain how to run a [Gazebo](http://gazebosim.org/  target="_blank") simulation.
 
 ## Docker
 
