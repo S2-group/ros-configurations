@@ -1,51 +1,49 @@
 # Gazebo Simulator
 
-Here we explain how to run a [Gazebo](http://gazebosim.org/) simulation.
+Here we explain how to run a [Gazebo](http://gazebosim.org/) simulation on Docker.
 
-## Docker
-
-All the environment is already set by using Docker and [this](https://hub.docker.com/_/gazebo) Dockerfile. 
+A gazebo image can be built with [the following](https://hub.docker.com/_/gazebo) Dockerfile. It is available in ./docker/gazebo/.
 
 ```
 FROM gazebo:gzserver8
 CMD ["gazebo"]
 ```
 
-Build it:
+Building the Docker image:
 
 ```
 $ docker build -t gazebo .
 ```
 
-Now you need to configure your OS for [running GUI apps on Docker](https://medium.com/@SaravSun/running-gui-applications-inside-docker-containers-83d65c0db110). Note that the right thing to do would be to connect to gxserver by using a remote gxclient. However, we want to reduce overload on the docker container. Therefore, we choose to run Docker apps with [Rocker](https://github.com/osrf/rocker).
+Now you need to configure your OS for running GUI apps on Docker. Note that the right thing would be to connect to the Gazebo server (gzserver) from a remote client (gzclient). However, we want to reduce network overhead. Therefore, we choose to run Docker apps with [Rocker](https://github.com/osrf/rocker).
 
 Installing Rocker:
 ```bash
 $ pip install rocker
 ```
 
-For NVidia cards:
+Running with NVidia display cards:
 ```bash
 $ rocker --nvidia --x11 --user --home gazebo
 ```
 
-For other generic cards:
+Running with other/generic cards:
 ```bash
 $ rocker --devices /dev/dri/card0 --x11 --user --home gazebo
 ```
 
 
-## Creating a World
+## Creating a World (Gazebo Model)
 
 You can follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
 
 ## Our Models
 
-For specific experiments, we have modeled the following environments in [SDF](http://sdformat.org/) (Simulation Description Format):
+For specific experiments, we have been using the following world.
 
 - [Indoor Navigation](#)
 
-You can also play with other models in [here](https://github.com/osrf/gazebo_models).
+You can also play with other models from [there](https://github.com/osrf/gazebo_models).
 
 ## Robot Runner and Gazebo
 
