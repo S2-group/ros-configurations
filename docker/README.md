@@ -16,7 +16,7 @@ $ git clone git@github.com:S2-group/ros-configurations.git
 $ cd ros-configuration/docker/ros2
 $ docker build -f- . < Dockerfile
 ```
-If you want to use ROS1, please use the path *ros-configuration/docker/ros2* instead.
+If you want to build a ROS1 image, please use the path *ros-configuration/docker/ros1* instead.
 
 You can check your Docker images:
 
