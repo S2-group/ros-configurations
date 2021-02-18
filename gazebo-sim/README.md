@@ -45,6 +45,14 @@ For specific experiments, we have been using the following world.
 
 You can also play with other models from [there](https://github.com/osrf/gazebo_models).
 
+## Gazebo and ROS
+
+```bash
+$ cd ../gazebo-ros/
+$ docker build -t gazebo-ros .
+$ rocker --devices /dev/dri/card0 --x11 --user --home gazebo-ros
+```
+
 ## Robot Runner and Gazebo
 
 ...
