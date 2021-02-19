@@ -43,7 +43,7 @@ $ docker build -t gazebo-ros .
 
 Running a containered image:
 ```bash
-$ rocker --nvidia/--devices /dev/dri/card0 --x11 --user --home gazebo-ros 
+$ rocker --nvidia --x11 --user --home gazebo-ros 
 ```
 
 From now on you will be in the Docker container shell. You must configure the environment (need to put this in the Dockerfile):
