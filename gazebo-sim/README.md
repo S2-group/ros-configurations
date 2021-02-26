@@ -56,6 +56,11 @@ Running a simulation example:
 # ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
+Before running another world, you must kill the gzserver:
+```
+# plill gzserver
+```
+
 ## Creating a World (Gazebo Model)
 
 You can follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
