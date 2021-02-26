@@ -25,7 +25,7 @@ $ rocker --nvidia --x11 --user --home gazebo
 
 Running with other/generic cards:
 ```bash
-$ rocker --devices /dev/dri/card0 --x11 --user --home gazebo
+$ rocker --devices /dev/dri/card0 --x11 --home gazebo
 ```
 ## Gazebo + ROS
 
@@ -43,12 +43,11 @@ $ docker build -t gazebo-ros .
 
 Running a containered image:
 ```bash
-$ rocker --nvidia --x11 --user --home gazebo-ros 
+$ rocker --nvidia --x11 --home gazebo-ros 
 ```
 
 From now on you will be in the Docker container shell. You must configure the environment (need to put this in the Dockerfile):
 ```bash
-# ./setup.sh
 # source source.sh
 ```
 
@@ -63,7 +62,7 @@ You can follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
 
 ## Our Models
 
-For specific experiments, we have been using the following world.
+For specific experiments, we have been using the following world (not available yet).
 
 - [Indoor Navigation](#)
 
