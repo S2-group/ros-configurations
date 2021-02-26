@@ -1,4 +1,4 @@
-FROM ros:eloquent
+FROM ros:dashing
 RUN sudo apt update && sudo apt-get install -y python3-pip wget
 RUN export CLOUDSDK_PYTHON=python3.8
 COPY ./ros2_rr_requirements.txt ./
