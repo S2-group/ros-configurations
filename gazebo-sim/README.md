@@ -30,7 +30,7 @@ $ rocker --devices /dev/dri/card0 --x11 --home gazebo
 ## Gazebo + ROS
 
 First of all, check the following tutorials:
-- [Simulation on ROS2](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/)
+- [Simulation on ROS2](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/) - This will help you to run a complete experiment with a simulated turtlebot.
 - [Possible Dependencies](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_setup/)
 
 A preset Dockerfile is available in ./docker/gazebo-ros/.
@@ -47,7 +47,7 @@ $ rocker --nvidia --x11 --home gazebo-ros
 ```
 
 From now on you will be in the Docker container shell. You must configure the environment (need to put this in the Dockerfile):
-```bash
+```
 # source source.sh
 ```
 
