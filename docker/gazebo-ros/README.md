@@ -1,5 +1,5 @@
 # full
-All of the most common packages.
+The most common packages.
 
 # light
 Basic isntallation.
