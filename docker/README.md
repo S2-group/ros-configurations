@@ -13,8 +13,8 @@ Specifically, you can change *FROM ros:foxy* to *FROM ros:eloquent* or any other
 
 ```bash
 $ git clone git@github.com:S2-group/ros-configurations.git
-$ cd ros-configuration/docker/ros2
-$ docker build -f- . < Dockerfile
+$ cd ros-configuration/docker/<image>-ros2
+$ docker build -t <image name> .
 ```
 If you want to build a ROS1 image, please use the path *ros-configuration/docker/ros1* instead.
 
@@ -27,7 +27,7 @@ $ docker images | grep ros
 You should get something like the following (with seconds/minutes ago, of course):
 
 ```
-ros                 eloquent            06184ad8a88a        2 weeks ago         829MB
+ros                 foxy            06184ad8a88a        2 weeks ago         829MB
 ```
 
 # Run Docker Images
