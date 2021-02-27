@@ -1,4 +1,4 @@
-# Gazebo + ROS
+# Gazebo + ROS2
 
 Before starting, [here](https://hub.docker.com/_/gazebo) you can check how to run a standalone (without ROS) Gazebo Simulator on Docker.
 
@@ -30,7 +30,6 @@ Running with other/generic cards:
 ```bash
 $ rocker --devices /dev/dri/card0 --x11 --home gazebo-ros2
 ```
-## Try Gazebo
 
 From now on (if you followed the previous commands) you will be in the Docker container shell.
 
