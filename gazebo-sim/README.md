@@ -1,65 +1,63 @@
-# Gazebo Simulator
+# Gazebo + ROS
 
-Here we explain how to run a [Gazebo](http://gazebosim.org/) simulation on Docker.
+Before starting, [here](https://hub.docker.com/_/gazebo) you can check how to run a standalone (without ROS) Gazebo Simulator on Docker.
 
-A gazebo image is created after [this](https://hub.docker.com/_/gazebo). The Dockerfile is available in ./docker/gazebo/.
+Our image can be found [here](https://hub.docker.com/repository/docker/michelalbonico/gazebo-ros2-foxy), and integrates both, Gazebo and ROS2. I can also use our images for ROS1 (coming soon).
 
-Building the Docker image:
+First of all, you need to build a Docker image (<b>attention</b>, it is such a big image ~6GB):
 
 ```
-$ cd docker/gazebo-ros2/light/
-$ docker build -t gazebo .
+$ git clone git@github.com:S2-group/ros-configurations.git
+$ cd ros-configuration/docker/gazebo-ros2/large/
+$ docker build -t gazebo-ros2 .
 ```
 
-Now you need to configure your OS for running GUI apps on Docker. Note that the right thing would be to connect to the Gazebo server (gzserver) from a remote client (gzclient). However, we want to reduce network overhead. Therefore, we choose to run Docker apps with [Rocker](https://github.com/osrf/rocker).
+Now you need to configure your OS for Docker to run GUI apps. Note that the right thing would be to connect to the Gazebo server (gzserver) from a remote client (gzclient). However, we want to reduce network overhead. Therefore, we choose to run Docker apps with [Rocker](https://github.com/osrf/rocker).
 
-Installing Rocker:
+Install the Rocker:
 ```bash
 $ pip install rocker
 ```
 
 Running with NVidia display cards:
 ```bash
-$ rocker --nvidia --x11 --user --home gazebo
+$ rocker --nvidia --x11 --home gazebo-ros2
 ```
 
 Running with other/generic cards:
 ```bash
-$ rocker --devices /dev/dri/card0 --x11 --home gazebo
+$ rocker --devices /dev/dri/card0 --x11 --home gazebo-ros2
 ```
-## Gazebo + ROS2
+## Try Gazebo
 
-First of all, check the following tutorials:
-- [Simulation on ROS2](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/) - This will help you to run a complete experiment with a simulated turtlebot.
-- [Possible Dependencies](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_setup/)
+From now on (if you followed the previous commands) you will be in the Docker container shell.
 
-A preset Dockerfile is available in ./docker/gazebo-ros2/full/.
+Set the environment variables:
 
-Building the Docker image (it is going to take a while):
 ```bash
-$ cd docker/gazebo-ros2/full/
-$ docker build -t gazebo-ros2 .
-```
-
-Running a containered image:
-```bash
-$ rocker --nvidia --x11 --home gazebo-ros2 
-```
-
-From now on you will be in the Docker container shell. You must configure the environment (need to put this in the Dockerfile):
-```
 # source source.sh
 ```
 
-Running a simulation example:
-```
+Run a simulation example:
+```bash
 # ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
-Before running another world, you must kill the gzserver:
-```
+Remember to kill the Gazebo server before running something else:
+```bash
 # plill gzserver
 ```
+
+[This](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/) will help you to run a complete experiment with a simulated turtlebot.
+
+
+## Gazebo and ROS(1)
+
+...
+
+## Robot Runner and Gazebo
+
+...
 
 ## Creating a World (Gazebo Model)
 
@@ -73,10 +71,4 @@ For specific experiments, we have been using the following world (not available 
 
 You can also play with other models from [there](https://github.com/osrf/gazebo_models).
 
-## Gazebo and ROS(1)
 
-...
-
-## Robot Runner and Gazebo
-
-...
