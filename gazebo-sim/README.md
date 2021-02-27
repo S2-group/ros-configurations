@@ -62,14 +62,12 @@ Remember to kill the Gazebo server before running something else:
 
 ## Creating a World (Gazebo Model)
 
-You can follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
+Follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
 
 ## Our Models
 
-For specific experiments, we have been using the following world (not available yet).
+...
 
-- [Indoor Navigation](#)
-
-You can also play with other models from [there](https://github.com/osrf/gazebo_models).
+Play with other models available [here](https://github.com/osrf/gazebo_models).
 
 
