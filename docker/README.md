@@ -39,7 +39,3 @@ $ docker exec -it <image name> /bin/bash
 ```
 
 Now it is play time! Please, check how to proceed with [Robot Runner](https://github.com/S2-group/robot-runner).
-
-# TODO
-
-@Michel: I need to check how to set RR local path so it's copied when building the Docker image.
