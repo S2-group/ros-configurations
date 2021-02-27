@@ -21,7 +21,7 @@ Now, follow all the setups...
 ---
 # Package
   - Ubuntu 18.04
-  - ROS2 (Eloquent)
+  - ROS2 (Eloquent) - We're migrating to Foxy
   - ROS1 (Melodic)
   - Turtlebot3 ROS Modules
   - TelloPy Python Library
