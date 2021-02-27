@@ -1,4 +1,4 @@
-# full
+# large
 The most common packages.
 
 # light
