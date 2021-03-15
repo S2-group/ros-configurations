@@ -1,5 +1,7 @@
 # large
-The most common packages.
+
+A great range o ROS packages + RR folder.
 
 # light
-Basic isntallation.
+
+A basic ROS installation + RR folder..
