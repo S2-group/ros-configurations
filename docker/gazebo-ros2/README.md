@@ -1,5 +1,8 @@
-# large
-The most common packages.
+# Dockerfiles for Gazebo and ROS2
 
-# light
-Basic isntallation.
+## large
+A complete image, which contains Gazebo and Turtlebot3 models/worlds.
+
+## light
+
+A basic Gazebo isntallation.
