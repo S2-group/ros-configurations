@@ -1,8 +1,8 @@
-# Dockerfiles for Gazebo and ROS2
+# Gazebo and ROS2
 
 ## large
-A complete image, which contains Gazebo and Turtlebot3 models/worlds.
+A complete ROS2 installation with Gazebo and Turtlebot3 models/worlds.
 
 ## light
 
-A basic Gazebo isntallation.
+A basic Gazebo installation with ROS2.
