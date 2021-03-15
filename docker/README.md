@@ -7,7 +7,7 @@ Specifically, you can change *FROM ros:foxy* to *FROM ros:eloquent* or any other
 
 **NOTE**: that the respective ROS1 and ROS2 Dockerfiles are created with a purpose, as their correct setup for robot-runner to be able to run, involve different steps. Therefore only alter the ROS1 dockerfile to any other ROS1 version, and do the same for the ROS2 dockerfile.
 
-# Build ROS Docker Images
+# How to Build ROS Docker Images
 
 **NOTE** that Docker must be already installed. If you do not know how, please check [this](https://docs.docker.com/engine/install/ubuntu/).
 
@@ -31,7 +31,7 @@ You should get something like the following (with seconds/minutes ago, of course
 ros                 foxy            06184ad8a88a        2 weeks ago         6GB
 ```
 
-# How to Run a Docker Image
+# How to Run Docker Images
 
 After the following command, you will get the bash shell in the container.
 
