@@ -1,5 +1,8 @@
+## ROS and Gazebo
+
 # large
-The most common packages.
+A complete ROS installation with Gazebo and Turtlebot3 models/worlds.
 
 # light
-Basic isntallation.
+
+A basic Gazebo installation with ROS1.
