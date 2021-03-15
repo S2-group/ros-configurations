@@ -1,4 +1,4 @@
-# Turtlebot Teleop Image
+# Turtlebot Teleop
 
 Please, set up the environment before starting playing with teleop stuff.
 
