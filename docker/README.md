@@ -37,5 +37,3 @@ After the following command, you will get the bash shell in the container.
 ```bash
 $ docker exec -it <image name> /bin/bash
 ```
-
-Now it is play time! Please, check how to proceed with [Robot Runner](https://github.com/S2-group/robot-runner).
