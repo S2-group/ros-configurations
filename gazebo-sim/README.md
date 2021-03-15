@@ -10,7 +10,7 @@ First of all, you need to build a Docker image (<b>attention</b>, it is such a b
 
 ```
 $ git clone git@github.com:S2-group/ros-configurations.git
-$ cd ros-configuration/docker/gazebo-ros2/large/
+$ cd ros-configuration/docker/ros2/gazebo/large/
 $ docker build -t gazebo-ros2 .
 ```
 
