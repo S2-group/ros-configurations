@@ -31,7 +31,7 @@ You should get something like the following (with seconds/minutes ago, of course
 ros                 foxy            06184ad8a88a        2 weeks ago         6GB
 ```
 
-# Run Docker Images
+# How to Run a Docker Image
 
 After the following command, you will get the bash shell in the container.
 
@@ -62,7 +62,7 @@ $ docker commit 03624e51eafe <image name>
 <b>Note that if you do not commit, all your changes will be lost.</b>
 
 
-# Pushing to Docker Hub
+# How to Push to Docker Hub
 
 We are currently using the repository [michelalbonico](https://hub.docker.com/u/michelalbonico/).
 
@@ -79,6 +79,6 @@ If you want to push any changes in this image, use the following command:
 ```bash
 $ docker push michelalbonico/ros-turtlebot:latest
 ```
-Note that you need to be a collaborator (ask [me](mailto:bsd.albonico@gmail.com).
+Note that you need to be a collaborator (ask [me](mailto:bsd.albonico@gmail.com)).
 
 
