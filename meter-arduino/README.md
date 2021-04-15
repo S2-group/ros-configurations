@@ -19,7 +19,7 @@ To build it you will need the following components:
 ```
 
 
-## Programming
+## Uploading the Code
 
 First of all, you must download the Arduino IDE from [here](https://www.arduino.cc/en/software). Then, follow the steps bellow.
 
