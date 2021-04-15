@@ -27,14 +27,19 @@ void measure() {
     power_mW = ina219.getPower_mW();
     loadvoltage = busvoltage + (shuntvoltage / 1000);
     
-    //Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
+    Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
     Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
     //Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
     Serial.print("Current:       "); Serial.print(current_mA); Serial.println(" mA");
     Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
     //Serial.println("");
 
-    line += measurementStep+","+String(shuntvoltage)+","+String(current_mA)+","+String(power_mW)+"\n";
+    line = measurementStep+","+
+      String(shuntvoltage)+","+
+      String(bustvoltage)+","+
+      String(current_mA)+","+
+      String(power_mW)+","+
+      String(loadvoltage)"\n";
     
     if (mFile) {
       Serial.print("Writing to data.csv...");
