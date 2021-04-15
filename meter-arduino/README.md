@@ -1,5 +1,23 @@
 # Arduino Current Meter
 
+This is the electronic circuit:
+
+<img src="img/circuit.png" align="center">
+
+### Shopping List
+
+- 1 Arduino Nano;
+- 1 Adafruit INA219 current sensor;
+- 1 microSD card adapter;
+- 1 SD card;
+- 1 170 points breadboard;
+- 1 push button;
+- 1 red LED;
+- male-male 10cm jumpers;
+- male-female 10cm jumpers;
+- female-female 10cm jumpers.
+
+
 ## Arduino IDE
 
 First of all, you must download the Arduino IDE from [here](https://www.arduino.cc/en/software).
@@ -12,13 +30,13 @@ Now, you must follow the steps bellow.
 
 ## Configuring the Libraries
 
-Our current meter device requires two libraries:
+Our current meter device requires two libraries (download the GitHub repositories as a Zip file):
 
-- Adafruit Sensor
+- [Adafruit INA219 Sensor](https://github.com/adafruit/Adafruit_INA219)
 
-- Adafruit IO
+- [Adafruit BusIO](https://github.com/adafruit/Adafruit_BusIO)
 
-Here is how we install them in the IDE:
+Here is how we install them in the IDE (you just need to upload the Zip files):
 
 <img src="img/add_libraries.png">
 
