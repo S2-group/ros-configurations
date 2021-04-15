@@ -2,7 +2,7 @@
 
 This is the electronic circuit:
 
-<img src="img/circuit.png" align="center">
+<img src="img/circuit.png" align="center" width="400px">
 
 ### Shopping List
 
