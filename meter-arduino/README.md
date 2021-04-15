@@ -26,9 +26,11 @@ Here is how we install them in the IDE:
 
 For that, it is required that your Arduino Nano is connected to a USB port. 
 
+<img src="img/select_port.png">
+
 ## Uploading the Code
 
-Supposing that you have already opened the <i>.ino</i> in this folder and you followed all the previous steps, you should be able to upload the code to the Arduino Nano.
+Supposing that you have already opened the <i>.ino</i> file in this folder and you followed all the previous steps, you should be able to upload the code to the Arduino Nano.
 
 To check whether the code is working, just push the button in your circuit, so the LED should be lit.
 
