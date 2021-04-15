@@ -17,7 +17,7 @@ To build it you will need the following components:
 - female-female 10cm jumpers.
 
 
-## Arduino IDE
+## Programming
 
 First of all, you must download the Arduino IDE from [here](https://www.arduino.cc/en/software).
 
