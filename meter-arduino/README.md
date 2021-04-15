@@ -19,9 +19,7 @@ To build it you will need the following components:
 
 ## Programming
 
-First of all, you must download the Arduino IDE from [here](https://www.arduino.cc/en/software).
-
-Now, you must follow the steps bellow.
+First of all, you must download the Arduino IDE from [here](https://www.arduino.cc/en/software). Then, follow the steps bellow.
 
 ### 1) Setting Up the Arduino Nano as Board
 
