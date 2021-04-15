@@ -27,7 +27,7 @@ First of all, you must download the Arduino IDE from [here](https://www.arduino.
 
 ### 2) Configuring the Libraries
 
-Our current meter device requires two libraries (download the GitHub repositories as a Zip file):
+Our current meter device requires two libraries (download each GitHub repository as a Zip file):
 
 - [Adafruit INA219 Sensor](https://github.com/adafruit/Adafruit_INA219)
 
