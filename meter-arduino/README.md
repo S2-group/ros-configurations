@@ -1,6 +1,6 @@
 # Arduino Current Meter
 
-This is the electronic circuit:
+This is the electronic circuit of the current meter prototype:
 
 <img src="img/circuit.png" align="center" width="400px">
 
@@ -24,11 +24,11 @@ First of all, you must download the Arduino IDE from [here](https://www.arduino.
 
 Now, you must follow the steps bellow.
 
-## Setting Up the Arduino Nano as Board
+### 1) Setting Up the Arduino Nano as Board
 
 <img src="img/setup_nano.png">
 
-## Configuring the Libraries
+### 2) Configuring the Libraries
 
 Our current meter device requires two libraries (download the GitHub repositories as a Zip file):
 
@@ -40,13 +40,13 @@ Here is how we install them in the IDE (you just need to upload the Zip files):
 
 <img src="img/add_libraries.png">
 
-## Configuring the Communication Port
+### 3) Configuring the Communication Port
 
 For that, it is required that your Arduino Nano is connected to a USB port. 
 
 <img src="img/select_port.png">
 
-## Uploading the Code
+### 4) Uploading the Code
 
 Supposing that you have already opened the <i>.ino</i> file in this folder and you followed all the previous steps, you should be able to upload the code to the Arduino Nano.
 
