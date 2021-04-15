@@ -5,6 +5,7 @@ This is the electronic circuit of the current meter prototype:
 <img src="img/circuit.png" align="center" width="400px">
 
 To build it you will need the following components:
+```
 - 1 Arduino Nano;
 - 1 Adafruit INA219 current sensor;
 - 1 microSD card adapter;
@@ -15,6 +16,7 @@ To build it you will need the following components:
 - male-male 10cm jumpers;
 - male-female 10cm jumpers;
 - female-female 10cm jumpers.
+```
 
 
 ## Programming
@@ -45,7 +47,7 @@ For that, it is required that your Arduino Nano is connected to a USB port.
 
 ### 4) Uploading the Code
 
-Supposing that you have already opened the <i>.ino</i> file in this folder and you followed all the previous steps, you should be able to upload the code to the Arduino Nano.
+Supposing that you have already opened the [<i>.ino</i> file](./meter-arduino.ino) in this folder and you followed all the previous steps, you should be able to upload the code to the Arduino Nano.
 
 To check whether the code is working, just push the button in your circuit, so the LED should be lit.
 
