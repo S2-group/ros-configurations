@@ -4,8 +4,7 @@ This is the electronic circuit of the current meter prototype:
 
 <img src="img/circuit.png" align="center" width="400px">
 
-### Shopping List
-
+To build it you will need the following components:
 - 1 Arduino Nano;
 - 1 Adafruit INA219 current sensor;
 - 1 microSD card adapter;
