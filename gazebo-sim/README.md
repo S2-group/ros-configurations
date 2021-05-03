@@ -93,4 +93,9 @@ Follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
 
 Play with other models available [here](https://github.com/osrf/gazebo_models).
 
+---
+# Energy-consumption Meter Device
+
+See [here](https://github.com/S2-group/ros-configurations/tree/main/meter-arduino) how to build and program our meter device.
+
 
