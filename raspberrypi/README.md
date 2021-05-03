@@ -184,7 +184,15 @@ publishing #2: std_msgs.msg.String(data='Hello there')
 
 publishing #3: std_msgs.msg.String(data='Hello there')
 ```
+----
 
+## Check Turtlebot
+
+To be done by Etienne/Joe
+
+...
+
+----
 ## Check DJ Tello (TELLO > WIFI -- RaspberryPy -- ETHERNET < ROS)
 
 Raspberry WiFi connects to TELLO (AP Mode), while all the ROS communication goes on rasp Ethernet network. So far, you must write your own Python scripts by using [TelloPy library] to interact with Tello and manage to link [rospy] (for ROS communication) and TelloPy. Not a big deal at all!
@@ -222,22 +230,7 @@ ALT:  0 | SPD:  0 | BAT: 39 | WIFI: 90 | CAM:  0 | MODE: 41
 ALT:  0 | SPD:  0 | BAT: 39 | WIFI: 90 | CAM:  0 | MODE: 41
 ...
 ```
-
-### DJ Tello Example
-
-Not available yet. To be done by Michel.
-
-## Check Turtlebot
-
-To be done by VU Team (Ivano's students)
-
-...
-
----
-# Todo
- - DJ Tello and ROS;
- - TurtleBot and ROS;
- - Customize splash (fancy stuff).
+----
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
