@@ -1,94 +1,14 @@
-#include <Wire.h>
-#include <Adafruit_INA219.h>
-#include <SPI.h>
-#include <SD.h>
+int cm = 0;
 
-Adafruit_INA219 ina219;
-int startPin = 9;
-int ledPin = 10;
-boolean measuring = false;
-int measurementStep = 0;
-File mFile;
-String line = "";
-int val;
-
-void measure() {
-  if (measuring) {
-    measurementStep += 1;
-    float shuntvoltage = 0;
-    float busvoltage = 0;
-    float current_mA = 0;
-    float loadvoltage = 0;
-    float power_mW = 0;
-  
-    shuntvoltage = ina219.getShuntVoltage_mV();
-    busvoltage = ina219.getBusVoltage_V();
-    current_mA = ina219.getCurrent_mA();
-    power_mW = ina219.getPower_mW();
-    loadvoltage = busvoltage + (shuntvoltage / 1000);
-    
-    //Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
-    Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
-    //Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
-    Serial.print("Current:       "); Serial.print(current_mA); Serial.println(" mA");
-    Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
-    //Serial.println("");
-
-    line += measurementStep+","+String(shuntvoltage)+","+String(current_mA)+","+String(power_mW)+"\n";
-    
-    if (mFile) {
-      Serial.print("Writing to data.csv...");
-      mFile.println(line);
-    }
-  }
-}
-
-void setup(void) 
+void setup()
 {
   Serial.begin(9600);
-  while (!Serial) {
-      // will pause Zero, Leonardo, etc until serial console opens
-      delay(1);
-  }
-
-  uint32_t currentFrequency;
-  
-  if (! ina219.begin()) {
-    Serial.println("Failed to find INA219 chip");
-    while (1) { delay(10); }
-  }
-  Serial.println("Measuring voltage and current with INA219 ...");
-
-  Serial.println("Setting up the digital pins!");
-  pinMode(ledPin, OUTPUT);
-  pinMode(startPin, INPUT);
-
-  Serial.print("Initializing SD card...");
-  if (!SD.begin(10)) {
-    Serial.println("initialization failed!");
-    while (1);
-  }
-  Serial.println("SD initialization done.");
+  pinMode(7,INPUT);
 }
 
-void loop(void) 
-{
-  // Start Button
-  val = digitalRead(startPin);
-  if (val == LOW) {        // if button pressed
-    if (!measuring) {
-      measuring = true;
-      mFile = SD.open("data.csv", FILE_WRITE);
-      digitalWrite(ledPin, HIGH);  // turn ON OFF - start measuring
-    } else {
-      measuring = false;
-      measurementStep = 0;
-      mFile.close();
-      digitalWrite(ledPin, LOW);  // turn LED OFF - stop measuring
-    } 
-  } 
-
-  measure();
-
-  delay(1000);
+void loop() {
+  Serial.print("Distancia: ");
+  cm = 0.01723 * digitalRead(7);
+  Serial.println(cm);
+  delay(500);
 }
