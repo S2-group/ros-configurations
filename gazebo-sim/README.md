@@ -51,7 +51,7 @@ Remember to kill the Gazebo server before running something else:
 
 ----
 
-## Gazebo and ROS(1)
+## Gazebo + ROS(1)
 
 Compile your ROS1+Gazebo+Turtlebot image:
 
