@@ -1,4 +1,4 @@
-# Energy-consumption Meter Device
+# Energy Meter Device
 
 See [here](https://github.com/S2-group/ros-configurations/tree/main/meter-arduino) how to build and program our meter device.
 
