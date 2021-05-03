@@ -6,7 +6,7 @@ This is a customized Ubuntu Bionic (18.04) image for running ROS on Raspberry Pi
 
 Automate them with [Robot-Runner].
 
-# How to use the image?
+## How to use the image?
 
 It requires a 16 GB SD card.
 
@@ -18,16 +18,15 @@ $ dd if=ubuntu-rasp-ros.img of=/dev/<your_sd_card> bs=4M
 Now, follow all the setups...
 
 > It has been run on Raspberry Pi 3 Model B+ and Raspberry Pi 4 Model B.
----
-# Package
+
+## Package
   - Ubuntu 18.04
   - ROS2 (Eloquent) - We're migrating to Foxy
   - ROS1 (Melodic)
   - Turtlebot3 ROS Modules
   - TelloPy Python Library
----
 
-# Log In
+## Log In
 
 * Username: ubuntu
 * Password: s2group
