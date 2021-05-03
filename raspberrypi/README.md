@@ -81,7 +81,7 @@ $ sudo netplan apply
 ---
 # Howto
 
-## Setup the ROS1 environment:
+## Set Up the ROS1 environment:
 
 Setup the environment variables:
 
@@ -138,7 +138,7 @@ You should get this:
 [INFO] [1611755100.747753]: hello world 1611755100.75
 ...
 ```
-## Setup the ROS2 environment:
+## Set Up the ROS2 environment:
 
 If ROS1 is running, kill the master node.
 
@@ -185,7 +185,7 @@ publishing #3: std_msgs.msg.String(data='Hello there')
 ```
 ----
 
-## Check Turtlebot
+## Check it on a Turtlebot
 
 To be done by Etienne/Joe
 
