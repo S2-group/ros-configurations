@@ -79,9 +79,13 @@ Follow the section <i>6.1.2</i> of the [Robotis tutorial](https://emanual.roboti
 
 ...
 
+----
+
 ## Creating a World (Gazebo Model)
 
 Follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
+
+----
 
 ## Our Models
 
