@@ -1,4 +1,4 @@
-# Raspberry+ROS Image
+# Raspberry+ROS
 
 **Since GitHub restricts file size to 100MB, you can dowload the compacted image from [here](http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz).**
 
