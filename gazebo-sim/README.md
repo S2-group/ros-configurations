@@ -4,9 +4,9 @@ Before starting, [here](https://hub.docker.com/_/gazebo) you can check how to ru
 
 ---
 
-Our image can be found [here](https://hub.docker.com/repository/docker/michelalbonico/gazebo-ros2-foxy), and integrates both, Gazebo and ROS2. We'll provide ROS1 images soon.
+Our image can be found [here](https://hub.docker.com/repository/docker/michelalbonico/gazebo-ros2-foxy), and integrates both, Gazebo+Turtlebot Worlds+ROS2. 
 
-First of all, you need to build a Docker image (<b>attention</b>, it is such a big image ~6GB):
+First of all, you need to build a Docker image (<b>attention</b>, it is a large image ~6GB):
 
 ```
 $ git clone git@github.com:S2-group/ros-configurations.git
@@ -51,10 +51,31 @@ Remember to kill the Gazebo server before running something else:
 
 [This](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/) will help you to run a complete experiment with a simulated turtlebot.
 
+----
 
 ## Gazebo and ROS(1)
 
-...
+Compile your ROS1+Gazebo+Turtlebot image:
+
+```
+$ git clone git@github.com:S2-group/ros-configurations.git
+$ cd ros-configuration/docker/ros/gazebo/large/
+$ docker build -t ros-gazebo-turtlebot .
+```
+Run your image:
+
+```bash
+$ rocker --devices /dev/dri/card0 --x11 --home ros-gazebo-turtlebot
+```
+Set the environment variables:
+
+```bash
+# source /opt/ros/melodic/setup.sh
+```
+
+Follow the section <i>6.1.2</i> of the [Robotis tutorial](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/). 
+
+----
 
 ## Robot Runner and Gazebo
 
