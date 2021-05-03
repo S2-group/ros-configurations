@@ -1,4 +1,4 @@
-# Raspberry+ROS Image
+# Raspberry+ROS
 
 **Since GitHub restricts file size to 100MB, you can dowload the compacted image from [here](http://www.iotrixx.com.br/imgs/raspberry/ubuntu-rasp-ros.img.xz).**
 
@@ -6,7 +6,7 @@ This is a customized Ubuntu Bionic (18.04) image for running ROS on Raspberry Pi
 
 Automate them with [Robot-Runner].
 
-# How to use the image?
+## How to use the image?
 
 It requires a 16 GB SD card.
 
@@ -18,16 +18,15 @@ $ dd if=ubuntu-rasp-ros.img of=/dev/<your_sd_card> bs=4M
 Now, follow all the setups...
 
 > It has been run on Raspberry Pi 3 Model B+ and Raspberry Pi 4 Model B.
----
-# Package
+
+## Package
   - Ubuntu 18.04
   - ROS2 (Eloquent) - We're migrating to Foxy
   - ROS1 (Melodic)
   - Turtlebot3 ROS Modules
   - TelloPy Python Library
----
 
-# Log In
+## Log In
 
 * Username: ubuntu
 * Password: s2group
@@ -82,7 +81,7 @@ $ sudo netplan apply
 ---
 # Howto
 
-## Setup the ROS1 environment:
+## Set Up the ROS1 environment:
 
 Setup the environment variables:
 
@@ -139,7 +138,7 @@ You should get this:
 [INFO] [1611755100.747753]: hello world 1611755100.75
 ...
 ```
-## Setup the ROS2 environment:
+## Set Up the ROS2 environment:
 
 If ROS1 is running, kill the master node.
 
@@ -184,7 +183,15 @@ publishing #2: std_msgs.msg.String(data='Hello there')
 
 publishing #3: std_msgs.msg.String(data='Hello there')
 ```
+----
 
+## Check it on a Turtlebot
+
+To be done by Etienne/Joe
+
+...
+
+----
 ## Check DJ Tello (TELLO > WIFI -- RaspberryPy -- ETHERNET < ROS)
 
 Raspberry WiFi connects to TELLO (AP Mode), while all the ROS communication goes on rasp Ethernet network. So far, you must write your own Python scripts by using [TelloPy library] to interact with Tello and manage to link [rospy] (for ROS communication) and TelloPy. Not a big deal at all!
@@ -222,22 +229,7 @@ ALT:  0 | SPD:  0 | BAT: 39 | WIFI: 90 | CAM:  0 | MODE: 41
 ALT:  0 | SPD:  0 | BAT: 39 | WIFI: 90 | CAM:  0 | MODE: 41
 ...
 ```
-
-### DJ Tello Example
-
-Not available yet. To be done by Michel.
-
-## Check Turtlebot
-
-To be done by VU Team (Ivano's students)
-
-...
-
----
-# Todo
- - DJ Tello and ROS;
- - TurtleBot and ROS;
- - Customize splash (fancy stuff).
+----
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 

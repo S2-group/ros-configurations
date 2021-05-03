@@ -27,6 +27,8 @@ First of all, you must download the Arduino IDE from [here](https://www.arduino.
 
 <img src="img/setup_nano.png">
 
+If you are using the Arduino Nano Every, please follow [this](https://www.arduino.cc/en/Guide/NANOEvery).
+
 ### 2) Configuring the Libraries
 
 Our current meter device requires two libraries (download each GitHub repository as a Zip file):
