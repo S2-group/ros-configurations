@@ -2,8 +2,6 @@
 
 Before starting, [here](https://hub.docker.com/_/gazebo) you can check how to run a standalone (without ROS) Gazebo Simulator on Docker.
 
----
-
 Our image can be found [here](https://hub.docker.com/repository/docker/michelalbonico/gazebo-ros2-foxy), and integrates both, Gazebo+Turtlebot Worlds+ROS2. 
 
 First of all, you need to build a Docker image (<b>attention</b>, it is a large image ~6GB):
