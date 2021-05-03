@@ -4,7 +4,7 @@ This repository shares preset configurations for ROS to be used in our experimen
 
 ## [Docker](./docker/)
 
-There we make public some Dockerfiles for running ROS (1 and 2) on your computer so you can "talk" to the robotic system.
+There we make public some Dockerfiles for running ROS (1 and 2) on your computer so you can "talk" to the robotics system.
 
 ## [RaspberryPi](./raspberrypi)
 
