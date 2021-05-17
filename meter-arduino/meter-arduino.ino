@@ -1,8 +1,8 @@
-int cm = 0;
+#include <Wire.h>
+#include <Adafruit_INA219.h>
+#include <SPI.h>
+#include <SD.h>
 
-<<<<<<< HEAD
-void setup()
-=======
 Adafruit_INA219 ina219;
 int startPin = 9;
 int ledPin = 10;
@@ -49,15 +49,51 @@ void measure() {
 }
 
 void setup(void) 
->>>>>>> 971777c68f0d87c16516e26c4298eb84ca2b9ed1
 {
   Serial.begin(9600);
-  pinMode(7,INPUT);
+  while (!Serial) {
+      // will pause Zero, Leonardo, etc until serial console opens
+      delay(1);
+  }
+
+  uint32_t currentFrequency;
+  
+  if (! ina219.begin()) {
+    Serial.println("Failed to find INA219 chip");
+    while (1) { delay(10); }
+  }
+  Serial.println("Measuring voltage and current with INA219 ...");
+
+  Serial.println("Setting up the digital pins!");
+  pinMode(ledPin, OUTPUT);
+  pinMode(startPin, INPUT);
+
+  Serial.print("Initializing SD card...");
+  if (!SD.begin(10)) {
+    Serial.println("initialization failed!");
+    while (1);
+  }
+  Serial.println("SD initialization done.");
 }
 
-void loop() {
-  Serial.print("Distancia: ");
-  cm = 0.01723 * digitalRead(7);
-  Serial.println(cm);
-  delay(500);
+void loop(void) 
+{
+  // Start Button
+  val = digitalRead(startPin);
+  if (val == LOW) {        // if button pressed
+    if (!measuring) {
+      measuring = true;
+      mFile = SD.open("data.csv", FILE_WRITE);
+      digitalWrite(ledPin, HIGH);  // turn ON OFF - start measuring
+    } else {
+      measuring = false;
+      measurementStep = 0;
+      mFile.close();
+      digitalWrite(ledPin, LOW);  // turn LED OFF - stop measuring
+    } 
+  } 
+
+  measure();
+
+  delay(1000);
 }
