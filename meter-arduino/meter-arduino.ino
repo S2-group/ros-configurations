@@ -4,8 +4,10 @@
 #include <SD.h>
 
 Adafruit_INA219 ina219;
-int startPin = 9;
-int ledPin = 10;
+// Ensure startPin matches your arduino configuration
+int startPin = 10;
+// Pin 13 is the in-build arduino LED
+int ledPin = 13;
 boolean measuring = false;
 int measurementStep = 0;
 File mFile;
@@ -29,17 +31,17 @@ void measure() {
     
     Serial.print("Bus Voltage:   "); Serial.print(busvoltage); Serial.println(" V");
     Serial.print("Shunt Voltage: "); Serial.print(shuntvoltage); Serial.println(" mV");
-    //Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
+    Serial.print("Load Voltage:  "); Serial.print(loadvoltage); Serial.println(" V");
     Serial.print("Current:       "); Serial.print(current_mA); Serial.println(" mA");
     Serial.print("Power:         "); Serial.print(power_mW); Serial.println(" mW");
     //Serial.println("");
 
-    line = measurementStep+","+
+    line = String(measurementStep)+","+
       String(shuntvoltage)+","+
-      String(bustvoltage)+","+
+      String(busvoltage)+","+
       String(current_mA)+","+
       String(power_mW)+","+
-      String(loadvoltage)"\n";
+      String(loadvoltage) + "\n";
     
     if (mFile) {
       Serial.print("Writing to data.csv...");
@@ -66,10 +68,11 @@ void setup(void)
 
   Serial.println("Setting up the digital pins!");
   pinMode(ledPin, OUTPUT);
-  pinMode(startPin, INPUT);
+  // INPUT_PULLUP enables the button's internal resistor
+  pinMode(startPin, INPUT_PULLUP);
 
   Serial.print("Initializing SD card...");
-  if (!SD.begin(10)) {
+  if (!SD.begin(5)) {
     Serial.println("initialization failed!");
     while (1);
   }
@@ -80,20 +83,20 @@ void loop(void)
 {
   // Start Button
   val = digitalRead(startPin);
-  if (val == LOW) {        // if button pressed
+  if (val == LOW) {                // if button pressed
     if (!measuring) {
       measuring = true;
       mFile = SD.open("data.csv", FILE_WRITE);
       digitalWrite(ledPin, HIGH);  // turn ON OFF - start measuring
+      delay(500);
     } else {
       measuring = false;
       measurementStep = 0;
       mFile.close();
       digitalWrite(ledPin, LOW);  // turn LED OFF - stop measuring
+      delay(500);
     } 
   } 
 
   measure();
-
-  delay(1000);
 }
