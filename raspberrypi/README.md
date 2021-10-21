@@ -86,7 +86,7 @@ $ sudo netplan apply
 Setup the environment variables:
 
 ```bash
-$ bash /opt/ros/melodic/setup.bash
+$ source /opt/ros/melodic/setup.bash
 ```
 
 Check the variables:
@@ -149,7 +149,7 @@ $ pkill roscore
 Setup the environment variables:
 
 ```bash
-$ bash /opt/ros/eloquent/setup.bash
+$ source /opt/ros/eloquent/setup.bash
 ```
 
 Check the variables:
