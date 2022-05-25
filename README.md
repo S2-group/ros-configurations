@@ -1,6 +1,7 @@
 # ROS Configuration
 
-This repository shares preset configurations for ROS to be used in our experiments on robotics software. 
+This repository shares preset configurations for ROS to be used in our experiments on robotics software. If you have doubts about ROS1 and ROS2, check [this](https://roboticsbackend.com/ros1-vs-ros2-practical-overview/).
+
 
 Bellow you see a list of related experiments:
 
@@ -22,9 +23,6 @@ Bellow you see a list of related experiments:
 |   -> Analysis | [result_analysis](https://github.com/IntelAgir-Research-Group/offloading_experiment_results) |
 | *SLAM Simulation* | [slam_simulation](https://github.com/S2-group/replication_package-SLAM_simulation) |
 | *Rosbag Extraction* | [rosbag_extraction](https://github.com/BerryC-VU/rosbag_project) |
-
-
-If you have doubts about ROS1 and ROS2, check [this](https://roboticsbackend.com/ros1-vs-ros2-practical-overview/).
 
 ## [Docker](./docker/)
 
