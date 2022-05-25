@@ -92,11 +92,15 @@ Prepare the simulation environment:
 $ roslaunch turtlebot3_gazebo turtlebot3_house.launch &
 ```
 
+![World house.](../figs/world_house.png)
+
 Run Gmapping SLAM/RVIZ:
 
 ```
 $ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping > /dev/null 2>&1 &
 ```
+
+![RVIZ.](../figs/rviz.png)
 
 Launch teleoperation (so you can drive the robot with your keyboard):
 
