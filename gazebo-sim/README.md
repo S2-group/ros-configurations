@@ -69,15 +69,41 @@ $ docker build -t ros-gazebo-turtlebot .
 Run your image:
 
 ```bash
-$ rocker --devices /dev/dri/card0 --x11 --home ros-gazebo-turtlebot
+$ rocker --devices /dev/dri/card0 --x11 --home michelalbonico:ros-gazebo-turtlebot3-full
 ```
 Set the environment variables:
 
 ```bash
-# source /opt/ros/melodic/setup.sh
+$ source /opt/ros/melodic/setup.sh
 ```
 
-Follow the section <i>6.1.2</i> of the [Robotis tutorial](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/). 
+These are the environment variables you should set in .bashrc:
+
+```
+$ export ROS_MASTER_URI=http://[remote-pc-ip]:11311/
+$ export ROS_HOSTNAME=[turtlebot-ip]
+$ export TURTLEBOT3_MODEL=waffle_pi
+```
+
+Prepare the simulation environment:
+
+```
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch &
+```
+
+Run Gmapping SLAM/RVIZ:
+
+```
+$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping > /dev/null 2>&1 &
+```
+
+Launch teleoperation (so you can drive the robot with your keyboard):
+
+```
+$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+``` 
+
+For further information, follow these tutorials: [Robotis tutorial](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/) and (SLAM)[https://github.com/gmac7892/SLAM/blob/master/tutorial.md]. 
 
 ----
 
