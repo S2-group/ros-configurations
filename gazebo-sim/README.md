@@ -114,20 +114,6 @@ For further information, follow these tutorials: [Robotis tutorial](https://eman
 
 ## Robot Runner and Gazebo
 
-...
-
-----
-
-## Creating a World (Gazebo Model)
-
-Follow [this](http://gazebosim.org/tutorials?tut=build_world) tutorial.
-
-----
-
-## Our Models
-
-...
-
-Play with other models available [here](https://github.com/osrf/gazebo_models).
+TBA
 
 
