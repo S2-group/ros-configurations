@@ -59,17 +59,18 @@ Remember to kill the Gazebo server before running something else:
 
 ## Gazebo + ROS(1)
 
-Compile your ROS1+Gazebo+Turtlebot image:
+Compile your ROS1+Gazebo+Turtlebot3 image:
 
 ```
 $ git clone git@github.com:S2-group/ros-configurations.git
 $ cd ros-configuration/docker/ros/gazebo/large/
-$ docker build -t ros-gazebo-turtlebot .
+$ docker build -t ros-gazebo-turtlebot3-full .
 ```
+
 Run your image:
 
 ```bash
-$ rocker --devices /dev/dri/card0 --x11 --home michelalbonico:ros-gazebo-turtlebot3-full
+$ rocker --devices /dev/dri/card0 --x11 --home ros-gazebo-turtlebot3-full
 ```
 Set the environment variables:
 
