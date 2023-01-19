@@ -2,6 +2,9 @@
 
 This repository shares preset configurations for ROS to be used in our experiments on robotics software. If you have doubts about ROS1 and ROS2, check [this](https://roboticsbackend.com/ros1-vs-ros2-practical-overview/).
 
+# ROS Foxy and Raspberry
+https://emanual.robotis.com/docs/en/platform/turtlebot3/sbc_setup/
+
 
 Bellow you see a list of related experiments:
 
