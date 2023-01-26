@@ -54,6 +54,14 @@ Remember to kill the Gazebo server before running something else:
 ```
 
 [This](https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_simulation/) will help you to run a complete experiment with a simulated turtlebot.
+---
+## ROS2 Desktop
+
+```bash
+$ docker pull osrf/ros:foxy-desktop
+$ rocker --devices /dev/dri/card0 --x11 --home --network host osrf/ros:foxy-desktop
+# export ROS_DOMAIN_ID=30
+```
 
 ----
 
