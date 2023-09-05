@@ -26,6 +26,7 @@ Bellow you see a list of related experiments:
 |   -> Analysis | [result_analysis](https://github.com/IntelAgir-Research-Group/offloading_experiment_results) |
 | *SLAM Simulation (Kwame)* | [slam_simulation](https://github.com/S2-group/replication_package-SLAM_simulation) |
 | *Rosbag Extraction (Berry)* | [rosbag_extraction](https://github.com/BerryC-VU/rosbag_project) |
+| *Arduino Power Meter* | [power-meter](https://github.com/S2-group/ros-configurations/tree/main/meter-arduino) |
 
 ## [Docker](./docker/)
 
